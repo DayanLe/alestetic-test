@@ -1,0 +1,6 @@
+{
+  "name": "Alestetic - Centro de Estética Médica",
+  "description": "Rediseño moderno, limpio y profesional para el Centro de Estética Alestetic, destacando tratamientos faciales y corporales de alta gama con agendamiento y asesoría de Inteligencia Artificial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
