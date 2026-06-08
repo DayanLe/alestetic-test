@@ -31,9 +31,9 @@ import TreatmentModal from './components/TreatmentModal';
 import { BeforeAfterSlider } from './components/BeforeAfterSlider';
 import { AlesteticLogo } from './components/AlesteticLogo';
 
-// Import generated premium assets
-import alesteticHero from './assets/images/alestetic_hero_1780755609656.png';
-import alesteticClinic from './assets/images/alestetic_clinic_1780755626959.png';
+// Import generated premium assets (WebP for better performance)
+import alesteticHero from './assets/images/alestetic_hero_1780755609656.webp';
+import alesteticClinic from './assets/images/alestetic_clinic_1780755626959.webp';
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState<'facial' | 'corporal' | 'premium'>('facial');
@@ -78,7 +78,7 @@ export default function App() {
   };
 
   const generateWhatsAppLink = (treatmentName?: string) => {
-    const phoneNum = '573125554321'; // Official-like mock Colombian WhatsApp
+    const phoneNum = import.meta.env.VITE_WHATSAPP_NUMBER || '573125554321';
     let text = '';
     
     if (treatmentName) {
