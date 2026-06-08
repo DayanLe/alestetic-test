@@ -261,6 +261,19 @@ export default function App() {
       </header>
 
 
+      {/* Floating WhatsApp CTA — visible at all scroll depths */}
+      <a
+        href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '573125554321'}?text=${encodeURIComponent('Hola Alestetic! 👋 Quisiera información sobre sus tratamientos. ¿Me pueden ayudar?')}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Hablar por WhatsApp con Alestetic"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold text-xs px-4 py-3 rounded-full shadow-2xl shadow-green-500/40 transition-all duration-300 hover:scale-105"
+        id="whatsapp-floating-btn"
+      >
+        <MessageCircle className="h-5 w-5" />
+        <span className="hidden sm:inline">Hablar con asesora</span>
+      </a>
+
       {/* 1. Hero Section */}
       <section className="relative pt-36 pb-20 md:py-40 bg-gradient-to-tr from-white via-rose-light/20 to-gold-100/30 overflow-hidden" id="inicio">
         {/* Decorative soft glowing elements in background */}
@@ -270,16 +283,19 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10" id="hero-grid">
           {/* Left Text Column */}
           <div className="lg:col-span-7 flex flex-col items-start" id="hero-text-block">
+            {/* SEO H1 — visually hidden, semantically primary for crawlers */}
+            <h1 className="sr-only">Centro de Estética Médica en Envigado – Tratamientos Faciales y Corporales con INVIMA | Alestetic Viva Envigado, Medellín</h1>
+
             {/* Upper Premium Badge */}
             <span className="text-[10px] font-black uppercase tracking-[0.35em] text-gold-600 bg-white/75 border border-gold-200/50 px-3.5 py-1.5 rounded-full mb-5 block shadow-xs">
               COSMETIC EXCELLENCE • SEDE VIVA ENVIGADO
             </span>
 
-            {/* Main Headline - Sleek Semi-Bold Typography */}
-            <h1 className="font-serif text-[42px] sm:text-[60px] lg:text-[76px] font-semibold tracking-tight text-clin-900 leading-[1.05] mb-6">
+            {/* Main Visual Headline — design-first, H2 for correct hierarchy */}
+            <h2 className="font-serif text-[42px] sm:text-[60px] lg:text-[76px] font-semibold tracking-tight text-clin-900 leading-[1.05] mb-6">
               Rigor Científico <br/>
               <span className="not-italic text-brand-gradient font-semibold block mt-1">Y Belleza Armónica.</span>
-            </h1>
+            </h2>
 
             {/* Supporting Copy */}
             <p className="text-base text-clin-700 leading-relaxed max-w-xl mb-8">
@@ -356,7 +372,9 @@ export default function App() {
             <div className="relative w-full max-w-[380px] h-[480px] rounded-t-full overflow-hidden border-[10px] border-white bg-white shadow-2xl flex flex-col justify-end" id="hero-image-inner-container">
               <img
                 src={alesteticHero}
-                alt="Alestetic modern cosmetic skin care treatment"
+                alt="Tratamiento facial clínico Alestetic – Centro de estética médica Viva Envigado, Medellín"
+                fetchPriority="high"
+                loading="eager"
                 className="w-full h-full object-cover hover:scale-105 duration-700 transition-transform"
                 referrerPolicy="no-referrer"
                 id="img-hero-main"
@@ -369,7 +387,7 @@ export default function App() {
                     <Droplet className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="text-[11px] font-black text-clin-900 uppercase tracking-tight">Piel Radiante</h4>
+                    <p className="text-[11px] font-black text-clin-900 uppercase tracking-tight">Piel Radiante</p>
                     <p className="text-[10px] text-clin-600 font-medium">Resultados inmediatos</p>
                   </div>
                 </div>
@@ -684,7 +702,7 @@ export default function App() {
             <div className="relative rounded-[2.5rem] overflow-hidden bg-white shadow-xl border-4 border-white" id="about-image-container">
               <img
                 src={alesteticClinic}
-                alt="Alestetic cosmetic clinic environment Viva Envigado"
+                alt="Clínica estética Alestetic en Centro Comercial Viva Envigado, Envigado, Medellín"
                 className="w-full h-[400px] object-cover hover:scale-105 duration-700 transition-transform"
                 referrerPolicy="no-referrer"
                 id="img-about-clinic"
@@ -878,12 +896,12 @@ export default function App() {
                   <p className="text-xs font-bold text-clin-900">Viva Envigado • Medellín</p>
                   <p className="text-[10px] text-clin-500 mt-1 max-w-[220px]">Ingresa por la torre médica comercial Nivel 3 para un acceso privado cómodo.</p>
                   <a
-                    href="https://waze.com"
+                    href="https://waze.com/ul?ll=6.17254,-75.59131&navigate=yes"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="mt-3 text-[10px] font-bold text-gold-700 hover:text-gold-900 underline flex items-center gap-1"
-                    referrerPolicy="no-referrer"
                   >
-                    Abrir coordenadas de Waze
+                    Abrir en Waze — CC Viva Envigado
                     <ArrowRight className="h-3 w-3" />
                   </a>
                 </div>
