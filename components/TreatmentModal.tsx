@@ -1,7 +1,8 @@
+'use client';
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Clock, Calendar, ShieldCheck, Sparkles, Check } from 'lucide-react';
-import { Treatment } from '../data';
+import { Treatment } from '@/lib/data';
 
 interface TreatmentModalProps {
   treatment: Treatment | null;

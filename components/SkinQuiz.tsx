@@ -1,7 +1,8 @@
+'use client';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, ArrowRight, ArrowLeft, RefreshCw, Calendar, Check } from 'lucide-react';
-import { TREATMENTS, Treatment } from '../data';
+import { TREATMENTS, Treatment } from '@/lib/data';
 
 interface SkinQuizProps {
   onBookTreatment: (treatmentName: string) => void;

@@ -4,22 +4,20 @@
 @theme {
   --font-serif: "Plus Jakarta Sans", "Inter", sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  
-  /* Brand colors from alestetic.com.co: clean aesthetic, teal/cyan medical tone combined with delicate blush */
-  --color-gold-50: #FAF5F6; /* Luxury Pearly Pink Powder */
-  --color-gold-100: #E2F4F7; /* Alestetic Soft Hydration Sky Tint */
-  --color-gold-200: #C2EAEF; /* Delicate brand cyan pastel */
-  --color-gold-300: #8FD5E3; /* Radiant brand cyan middle */
-  --color-gold-400: #3CA9C6; /* THE Official vibrant alestetic.com.co turquoise cyan */
-  --color-gold-500: #2C8EAA; /* Professional deep Clinical Teal */
-  --color-gold-600: #206E85; /* Trustworthy deep ocean cyan */
-  --color-gold-700: #175263; /* Clinical dark teal outline */
-  --color-gold-800: #0E3541; /* Deep luxury navy-cyan */
-  --color-gold-900: #071F26; /* Darkest teal slate */
 
-  /* Pure Charcoal & Warm Cashmere hues representing clinical trust and high fidelity */
-  --color-clin-900: #0B1113; /* Rich dark carbon */
-  --color-clin-800: #1B2426; /* Warm grey-teal */
+  --color-gold-50: #FAF5F6;
+  --color-gold-100: #E2F4F7;
+  --color-gold-200: #C2EAEF;
+  --color-gold-300: #8FD5E3;
+  --color-gold-400: #3CA9C6;
+  --color-gold-500: #2C8EAA;
+  --color-gold-600: #206E85;
+  --color-gold-700: #175263;
+  --color-gold-800: #0E3541;
+  --color-gold-900: #071F26;
+
+  --color-clin-900: #0B1113;
+  --color-clin-800: #1B2426;
   --color-clin-700: #3E4B4E;
   --color-clin-600: #5C6E72;
   --color-clin-500: #7C9196;
@@ -29,10 +27,9 @@
   --color-clin-100: #F3F8F9;
   --color-clin-5: #FAFDFE;
 
-  /* Feminine soft accents indicating safety, relaxation and pampering beauty */
-  --color-rose-accent: #F7D6DC; /* Pure elegant soft pink */
-  --color-rose-light: #FBF0F2; /* Creamy rose silk */
-  --color-rose-deep: #A76371; /* Highly professional warm berry */
+  --color-rose-accent: #F7D6DC;
+  --color-rose-light: #FBF0F2;
+  --color-rose-deep: #A76371;
 }
 
 @layer base {
@@ -41,14 +38,12 @@
     font-family: var(--font-sans);
     background-color: var(--color-clin-5);
   }
-
   body {
     color: var(--color-clin-900);
     overflow-x: hidden;
   }
 }
 
-/* Custom premium styles */
 .text-brand-gradient {
   background: linear-gradient(135deg, var(--color-clin-900) 25%, var(--color-gold-400) 70%, var(--color-rose-deep) 100%);
   -webkit-background-clip: text;
@@ -62,34 +57,32 @@
 }
 
 .feminine-gradient-mesh {
-  background: radial-gradient(at 10% 20%, rgba(226, 244, 247, 0.45) 0px, transparent 50%),
-              radial-gradient(at 90% 10%, rgba(251, 240, 242, 0.6) 0px, transparent 50%),
-              radial-gradient(at 50% 90%, rgba(250, 245, 246, 0.5) 0px, transparent 50%),
+  background: radial-gradient(at 10% 20%, rgba(226,244,247,0.45) 0px, transparent 50%),
+              radial-gradient(at 90% 10%, rgba(251,240,242,0.6) 0px, transparent 50%),
+              radial-gradient(at 50% 90%, rgba(250,245,246,0.5) 0px, transparent 50%),
               var(--color-clin-5);
 }
 
 .boutique-button-primary {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   background: linear-gradient(135deg, var(--color-clin-900) 0%, var(--color-gold-500) 100%);
-  box-shadow: 0 8px 24px rgba(44, 142, 170, 0.15);
+  box-shadow: 0 8px 24px rgba(44,142,170,0.15);
 }
-
 .boutique-button-primary:hover {
   background: linear-gradient(135deg, var(--color-gold-500) 0%, var(--color-rose-deep) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(167, 99, 113, 0.2);
+  box-shadow: 0 12px 30px rgba(167,99,113,0.2);
 }
 
 .luxury-card {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  border-color: rgba(226, 244, 247, 0.6);
-  background-color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(226,244,247,0.6);
+  background-color: rgba(255,255,255,0.85);
   backdrop-filter: blur(8px);
 }
-
 .luxury-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 30px 60px rgba(11, 17, 19, 0.05);
+  box-shadow: 0 30px 60px rgba(11,17,19,0.05);
   border-color: var(--color-gold-300);
 }
 
@@ -99,4 +92,3 @@
   letter-spacing: -0.015em;
   line-height: 1.15;
 }
-
